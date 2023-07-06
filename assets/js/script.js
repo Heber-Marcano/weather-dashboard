@@ -25,11 +25,37 @@ $.ajax({
     const temp = forecastData[i].main.temp;
     const humidity = forecastData[i].main.humidity;
     const weatherDesc = forecastData[i].weather[0].description;
-  }
+  
   const tempF = ((temp - 273.15) * 9/5 + 32).toFixed(2);
  fiveDayForecast.push({ date, temp: tempF, humidity, weatherDesc });
 }
 function cityweather(){
-    var cit
-}
-)
+    var citySelector = document.querySelector("#city-name");
+    var descriptionItem = document.querySelector("#city-description");
+    var temperatureItem = document.querySelector("#city-temp");
+    var humidityItem = document.querySelector("#city-humitity");
+    var windSpeedItem = document.querySelector("#city-wind");
+
+    citySelector.textContent = cityName + " " + "(" + currentDay + ")";
+    descriptionItem.textContent = "Description: " + weatherDesc;
+    temperatureItem.textContent = `Temperature:  ${Math.round((currentTemp - 273.15) * 9/5 + 32)} °F`
+    humidityItem.textContent = "Humidity: " + humidity + "%";
+    windSpeedItem.textContent = "Wind Speed: " + windSpeed + " m/s";
+  }
+  cityweather()
+
+  $("#five-day-forecast").html("");
+  fiveDayForecast.forEach((day) => {
+    $("#five-day-forecast").append(`<section class="card">
+    <p>${day.date}</p>
+    <p>Temperature: ${day.temp} °F</p>
+    <p>Humidity: ${day.humidity}%</p>
+    <p>Description: ${day.weatherDesc}</p>
+    </section>`);
+  });
+  const searchedCity = {
+    name: cityName
+  };
+  $("#city-list").append(
+    `<li>${searchedCity.name}</li>`);
+});

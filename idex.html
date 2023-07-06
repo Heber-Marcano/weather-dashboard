@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Recipe Finder</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather app</title>
+  </head>
 <body>
   <header>
     <h1>Weather serch by city</h1>
@@ -17,6 +23,24 @@
       <button type="submit">Search</button>
     </form>
     <div id="results"></div>
+    <section id="city-date"></section>
+    
+    <section class="city-conditions">
+        <li id="city-name"></li>
+        <li id="city-description"></li>
+        <li id="city-temp"></li>
+        <li id="city-humitity"></li>
+        <li id="city-wind"></li>
+    </section>
+
+    <div id="five-day-forecast">
+        <section class="card" style="display: none"></section>
+        <section class="card" style="display: none"></section>
+        <section class="card" style="display: none"></section>
+        <section class="card" style="display: none"></section>
+        <section class="card" style="display: none"></section>
+    </div>
+
   </main>
   <script src="./assets/js/script.js"></script>
 </body>
