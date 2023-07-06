@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+
+header {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+
+#search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.city-conditions {
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.city-conditions li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+#five-day-forecast {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex-basis: calc(20% - 20px);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.card:nth-child(1) {
+    background-color: #ffcccc;
+}
+
+.card:nth-child(2) {
+    background-color: #ccffcc;
+}
+
+.card:nth-child(3) {
+    background-color: #ccccff;
+}
+
+.card:nth-child(4) {
+    background-color: #ffffcc;
+}
+
+.card:nth-child(5) {
+    background-color: #ffccff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        flex-basis: 100%;
+    }
+}
